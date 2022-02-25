@@ -165,34 +165,43 @@ df = pandas.read_csv()
 
 Quel est le type de l'objet `df`?
 ```
-
+C'est un objet pandas dataframe.
 ```
 
 ##### Descriptions d'une table de données
 Que permettent les méthodes suivantes?
 ###### df.shape
 ```
+ shape est un attribut de l'objet dataframe qui retourne les dimensions du tableau (dataframe), ici on a 7 colonnes et 2024 lignes.
 ```
 ###### df.head()
 ```
+Cette méthode affiche les 5 premières lignes du dataframe.
 ```
 ###### df.tail()
 ```
+Cette méthode affiche les 5 dernières lignes du dataframe.
 ```
 ###### df.columns
 ```
+Retourne un index (un itérable un peu comme une liste) des noms des colonnes
 ```
 ###### df.dtypes
 ```
+Retourne un array numpy en 1 dimension, sous la forme d'une série pandas, qui nous indique le type des valeurs dans chaque colonne, et quelle colonne est liée à ces types de valeurs. (C'est comme une liste avec un titre pour chaque colonne)
 ```
 ###### df.info
 ```
+Méthode qui retourne un résumé du dataframe : ses dimensions, les premières et dernières lignes, les types des valeurs contenues dans chaque colonnes, ainsi que le nombre de valeurs non nulles dans chaque colonne.
 ```
 ###### df.describe()
 ```
+Cette méthode retourne les statistiques descriptives des colonnes du dataframe. Pour le moment, une seule colonne reconnue comme une colonne contenant des éléments numériques, c'est donc la seule à être analysée par describe.
 ```
 ###### df.dropna()
 ```
+Permet de se débarasser des NAN values. Peut être utilisé de différentes façons : 
+On peut supprimer toutes les lignes ou colonnes qui ont au moins une NAN value. On peut aussi choisir de ne supprimer la ligne ou colonne que si elle contient uniquement des NAN values.     
 ```
 
 ##### Accès aux éléments d'une table de données
@@ -205,6 +214,10 @@ Quel est le type de `values` ?
 
 Verifiez si certaines méthodes de `DataFrame` lui sont applicables.
 Ce type supporte l'accès par indice et les slice `[a:b]`
+```
+values est un dataframe à part entière, supportant toutes les méthodes de dataframe.
+Il s'agit en fait d'une sous-partie du dataframe df.
+```
 
 ##### Accès indicé
 
